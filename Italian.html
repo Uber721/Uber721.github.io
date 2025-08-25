@@ -39,6 +39,43 @@
     <br>
     <h1>
       Commonly Used Utensils
+    <button class="draggable">Button 1</button>
+    <button class="draggable">Button 2</button>
+    <button class="draggable">Button 3</button>
+    .draggable {
+  position: absolute;
+  cursor: grab;
+  padding: 10px 20px;
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  user-select: none;
+}
+.draggable.dragging {
+  cursor: grabbing;
+}
+      document.querySelectorAll('.draggable').forEach(elem => {
+  let offsetX, offsetY;
+
+  elem.addEventListener('mousedown', (e) => {
+    offsetX = e.clientX - elem.getBoundingClientRect().left;
+    offsetY = e.clientY - elem.getBoundingClientRect().top;
+    elem.classList.add('dragging');
+
+    function onMouseMove(e) {
+      elem.style.left = `${e.clientX - offsetX}px`;
+      elem.style.top = `${e.clientY - offsetY}px`;
+    }
+
+    document.addEventListener('mousemove', onMouseMove);
+
+    document.addEventListener('mouseup', () => {
+      elem.classList.remove('dragging');
+      document.removeEventListener('mousemove', onMouseMove);
+    }, { once: true });
+  });
+});
     </h1>
     
     <br>
