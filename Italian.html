@@ -1,86 +1,76 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>
-      Italian Cuisine
-    </title>
-    <meta charset="UTF-8">
-    <style>
-      body {font-famil:'Times New Roman', Times, serif;}
-    </style>
-  </head>
-  <body>
-    <centre>
-      <h1 style="font-size: 200%;">
-        Italian Cuisine
-      </h1>
-    </centre>
-    <br>
-    <h1>
-      Commonly Used Ingredients
-    </h1>
-    <p>
-      Some commonly used ingredients in Italian cooking are:
-      <br>
-      <ul>
-        <li>Olive Oil</li>
-        <li>Garlic</li>
-        <l1>Tomatoes</l1>
-        <l1>Basil</l1>
-        <li>Pasta</li>
-        <li>Onions</li>
-        <li>Oregano</li>
-        <li>Parmesan Cheese</li>
-        <li>Bread</li>
-        <li>Rice</li>
-      </ul>
-    </p>
-    <br>
-    <br>
-    <h1>
-      Commonly Used Utensils
-    <button class="draggable">Button 1</button>
-    <button class="draggable">Button 2</button>
-    <button class="draggable">Button 3</button>
-    .draggable {
-  position: absolute;
-  cursor: grab;
-  padding: 10px 20px;
-  background-color: #2ecc71;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  user-select: none;
-}
-.draggable.dragging {
-  cursor: grabbing;
-}
-      document.querySelectorAll('.draggable').forEach(elem => {
-  let offsetX, offsetY;
-
-  elem.addEventListener('mousedown', (e) => {
-    offsetX = e.clientX - elem.getBoundingClientRect().left;
-    offsetY = e.clientY - elem.getBoundingClientRect().top;
-    elem.classList.add('dragging');
-
-    function onMouseMove(e) {
-      elem.style.left = `${e.clientX - offsetX}px`;
-      elem.style.top = `${e.clientY - offsetY}px`;
+<head>
+  <title>Italian Cuisine</title>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: 'Times New Roman', Times, serif;
     }
 
-    document.addEventListener('mousemove', onMouseMove);
+    .draggable {
+      position: absolute;
+      cursor: grab;
+      padding: 10px 20px;
+      background-color: #2ecc71;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      user-select: none;
+    }
 
-    document.addEventListener('mouseup', () => {
-      elem.classList.remove('dragging');
-      document.removeEventListener('mousemove', onMouseMove);
-    }, { once: true });
-  });
-});
-    </h1>
-    
-    <br>
-    <p>
-      
-    </p>
-  </body>
+    .draggable.dragging {
+      cursor: grabbing;
+    }
+  </style>
+</head>
+<body>
+  <div style="text-align: center;">
+    <h1 style="font-size: 200%;">Italian Cuisine</h1>
+  </div>
+
+  <h1>Commonly Used Ingredients</h1>
+  <p>Some commonly used ingredients in Italian cooking are:</p>
+  <ul>
+    <li>Olive Oil</li>
+    <li>Garlic</li>
+    <li>Tomatoes</li>
+    <li>Basil</li>
+    <li>Pasta</li>
+    <li>Onions</li>
+    <li>Oregano</li>
+    <li>Parmesan Cheese</li>
+    <li>Bread</li>
+    <li>Rice</li>
+  </ul>
+
+  <h1>Commonly Used Utensils</h1>
+  <button class="draggable" style="left: 50px; top: 500px;">Button 1</button>
+  <button class="draggable" style="left: 200px; top: 500px;">Button 2</button>
+  <button class="draggable" style="left: 350px; top: 500px;">Button 3</button>
+
+  <script>
+    document.querySelectorAll('.draggable').forEach(elem => {
+      let offsetX, offsetY;
+
+      elem.addEventListener('mousedown', (e) => {
+        offsetX = e.clientX - elem.getBoundingClientRect().left;
+        offsetY = e.clientY - elem.getBoundingClientRect().top;
+        elem.classList.add('dragging');
+
+        function onMouseMove(e) {
+          elem.style.left = `${e.clientX - offsetX}px`;
+          elem.style.top = `${e.clientY - offsetY}px`;
+        }
+
+        document.addEventListener('mousemove', onMouseMove);
+
+        document.addEventListener('mouseup', () => {
+          elem.classList.remove('dragging');
+          document.removeEventListener('mousemove', onMouseMove);
+        }, { once: true });
+      });
+    });
+  </script>
+</body>
 </html>
