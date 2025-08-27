@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mexican Cuisine</title>
+    <meta charset="UTF-8">
+   <style> 
+     body {
+      font-family: 'Times New Roman', Times, serif;
+    }
+     
+    .draggable {
+      position: absolute;
+      cursor: grab;
+      padding: 10px 20px;
+      background-color: #ffffff;
+      color: white;
+      border: 2px solid black;
+      border-radius: 6px;
+      user-select: none;
+    }
+
+    .draggable.dragging {
+      cursor: grabbing;
+    }
+
+    .correct {
+  border: 2px solid green;
+  background-color: #e6ffe6;
+}
+
+.incorrect {
+  border: 2px solid red;
+  background-color: #ffe6e6;
+}
+   </style>
+  </head>
+  <body>
+    <div style="text-align: center;">
+     <h1 style="font-size: 200%;">Italian Cuisine</h1>
+    </div>
+    <br>
+    <h1> SOme commonly used ingrediants in Mexican cooking are</h1>
+    <input type="text" class="answer" data-correct="basil" placeholder="Ingredient 1">
+    <input type="text" class="answer" data-correct="garlic" placeholder="Ingredient 2">
+    <input type="text" class="answer" data-correct="oregano" placeholder="Ingredient 3">
+    <button onclick="checkAllAnswers()">Check Answers</button>
+    <script>
+      function checkAllAnswers() {
+  document.querySelectorAll('.answer').forEach(input => {
+    const correctAnswer = input.dataset.correct.toLowerCase();
+    const userAnswer = input.value.trim().toLowerCase();
+
+    if (userAnswer === correctAnswer) {
+      input.classList.remove("incorrect");
+      input.classList.add("correct");
+    } else {
+      input.classList.remove("correct");
+      input.classList.add("incorrect");
+    }
+  });
+}
+    </script>
+  </body>
+</html>
