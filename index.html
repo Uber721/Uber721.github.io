@@ -5,6 +5,31 @@
       My Food Tech Assignment
     </title>
     <meta charset="UTF-8">
+    <style>
+          body {
+      margin: 0;
+      overflow: hidden;
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+    }
+
+    .bouncer {
+      position: absolute;
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      transition: background-color 0.3s;
+    }
+
+    .bouncer:hover {
+      background-color: #2980b9;
+    }
+
+    </style>
   </head>
   <body>
     <centre>
@@ -19,27 +44,50 @@
     </p>
     <br>
     <p>
-      <a href="https://uber721.github.io/Italian.html"> Italian </a>
-    </p>
-    <br>
-    <p>
-      <a href="https://uber721.github.io/mexican.html"> Mexican </a>
-    </p>  
-    <br>
-    <p>
-      Asian
-    </p>
-    <br>
-    <p>
-      Indian
-    </p>    
-    <br>
-    <p>
-      Middle Eastern
-    </p>  
-    <br>
-    <p>
-      My choice!
-    </p>  
+      <a href="https://uber721.github.io/Italian.html" class="bouncer">Italian</a>
+      <a href="https://uber721.github.io/mexican.html class="bouncer">LMexican</a>
+      <a href="#" class="bouncer">Link 3</a>
+      <a href="#" class="bouncer">Link 4</a>
+      <a href="#" class="bouncer">Link 5</a>
+    </p> 
+     <script>
+    const links = document.querySelectorAll('.bouncer');
+    const bouncers = [];
+
+    links.forEach(link => {
+      const maxX = window.innerWidth - link.offsetWidth;
+      const maxY = window.innerHeight - link.offsetHeight;
+
+      const x = Math.random() * maxX;
+      const y = Math.random() * maxY;
+      const dx = 2 + Math.random() * 2;
+      const dy = 2 + Math.random() * 2;
+
+      bouncers.push({ el: link, x, y, dx, dy });
+
+      link.style.left = x + 'px';
+      link.style.top = y + 'px';
+    });
+
+    function animate() {
+      bouncers.forEach(b => {
+        const w = window.innerWidth - b.el.offsetWidth;
+        const h = window.innerHeight - b.el.offsetHeight;
+
+        b.x += b.dx;
+        b.y += b.dy;
+
+        if (b.x <= 0 || b.x >= w) b.dx *= -1;
+        if (b.y <= 0 || b.y >= h) b.dy *= -1;
+
+        b.el.style.left = b.x + 'px';
+        b.el.style.top = b.y + 'px';
+      });
+
+      requestAnimationFrame(animate);
+    }
+    animate();
+
+     </script>
   </body>
 </html>
