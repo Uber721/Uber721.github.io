@@ -82,7 +82,42 @@
     <br>
     <br>
     <h1>Can you also name these cooking utensils</h1>
-    <p> Pasta Machine<button class="draggable" style="left: 0px; top: 2500px;"><img src="https://Uber721.github.io/Pasta Machine.png" width = "100"></button></p>
+    <p> Mortar and Pestle<button class="draggable" style="left: 0px; top: 2500px;"><img src="https://Uber721.github.io/Mortar and pestle.jpg " width = "100"></button></p>
+    <br>
+    <br>
+    <br>
+    <p> Comal<button class="draggable" style="left: 0px; top: 2600px;"><img src="https://Uber721.github.io/comal.jpg" width = "100"></button></p>
+    <br>
+    <br>
+    <br>
+    <p> Tortilla Press<button class="draggable" style="left: 0px; top: 2600px;"><img src="https://Uber721.github.io/tortilla press.jpg" width = "100"></button></p>
+    <br>
+    <br>
+    <br>
+    <p> Metate<button class="draggable" style="left: 0px; top: 2600px;"><img src="https://Uber721.github.io/metate.jpg" width = "100"></button></p>
+    <br>
+    <br>
+    <br>
+    <p> Exprimidor<button class="draggable" style="left: 0px; top: 2600px;"><img src="https://Uber721.github.io/exprimidor.jpg" width = "100"></button></p>
+    <br>
+    <br>
+    <br>
+    <p> Skillet<button class="draggable" style="left: 0px; top: 2600px;"><img src="https://Uber721.github.io/skillet.jpg" width = "100"></button></p>
+    <br>
+    <br>
+    <br>
+    <p> Wooden Spoon<button class="draggable" style="left: 0px; top: 2600px;"><img src="https://Uber721.github.io/Wooden spoon.jpg" width = "100"></button></p>
+    <br>
+    <br>
+    <br>
+    <p> Molinillo<button class="draggable" style="left: 0px; top: 2600px;"><img src="https://Uber721.github.io/molinillo.jpg" width = "100"></button></p>
+    <br>
+    <br>
+    <br>
+    <p> Tamaleras<button class="draggable" style="left: 0px; top: 2600px;"><img src="https://Uber721.github.io/tamaleras.jpg" width = "100"></button></p>
+    <br>
+    <br>
+    <br>
     <script>
       function checkAllAnswers() {
   document.querySelectorAll('.answer').forEach(input => {
@@ -98,6 +133,28 @@
     }
   });
 }
+      document.querySelectorAll('.draggable').forEach(elem => {
+      let offsetX, offsetY;
+
+      elem.addEventListener('mousedown', (e) => {
+        offsetX = e.clientX - elem.getBoundingClientRect().left;
+        offsetY = e.clientY - elem.getBoundingClientRect().top;
+        elem.classList.add('dragging');
+
+        function onMouseMove(e) {
+          elem.style.left = `${e.clientX - offsetX}px`;
+          elem.style.top = `${e.clientY - offsetY}px`;
+        }
+
+        document.addEventListener('mousemove', onMouseMove);
+
+        document.addEventListener('mouseup', () => {
+          elem.classList.remove('dragging');
+          document.removeEventListener('mousemove', onMouseMove);
+        }, { once: true });
+      });
+    });
+  </script>
     </script>
   </body>
 </html>
