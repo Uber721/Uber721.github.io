@@ -4,47 +4,32 @@
   <meta charset="UTF-8">
   <title>Asia</title>
   <style>
-body {
+    body {
       font-family: 'Times New Roman', Times, serif;
     }
+
     img {
-      text-align: left; border: 2px solid black
+      border: 2px solid black;
     }
 
     .question {
       margin-bottom: 20px;
     }
 
-    .dropzone {
+    select {
       width: 300px;
-      height: 50px;
-      border: 2px dashed #ccc;
+      padding: 8px;
+      font-size: 16px;
       margin-top: 10px;
-      text-align: center;
-      line-height: 50px;
-      font-weight: bold;
-      background-color: #f9f9f9;
-    }
-
-    .draggable {
-      display: inline-block;
-      padding: 10px 20px;
-      margin: 5px;
-      background-color: #ffffff;
-      color: solid black;
-      border: 2px solid black
-      width: 200px
-      border-radius: 5px;
-      cursor: grab;
     }
 
     .correct {
-      border-color: green;
+      border: 2px solid green;
       background-color: #e6ffe6;
     }
 
     .incorrect {
-      border-color: red;
+      border: 2px solid red;
       background-color: #ffe6e6;
     }
 
@@ -56,91 +41,431 @@ body {
   </style>
 </head>
 <body>
-<h1 style="font-size: 30px; text-alignment: centre;"> Asian Cuisine </h1>
-  <br>
-  <h1> Asian Countries</h1>
-  <p>Drag and Drop your guesses of some Asian countries!</p>
+  <h1 style="font-size: 30px; text-align: center;">Asian Cuisine</h1>
+  <h1>Asian Countries</h1>
+  <p>Select the correct country for each flag:</p>
+
   <div class="question">
-    <p><img src="https://uber721.github.io/iran.png" height="100" width="150"></p> <div class="dropzone" data-answer="Iran"></div>
-    <p><img src="https://uber721.github.io/cambodia.png" height="100" width="150"><div class="dropzone" data-answer="Cambodia"></div></p> 
-    <p><img src="https://uber721.github.io/south korea.png" height="100" width="150"></p> <div class="dropzone" data-answer="South Korea"></div>
-    <p><img src="https://uber721.github.io/philippines.png" height="100" width="150"></p> <div class="dropzone" data-answer="Phillipines"></div>
-    <p><img src="https://uber721.github.io/lebanon.png" height="100" width="150"></p> <div class="dropzone" data-answer="Lebanon"></div>
-    <p><img src="https://uber721.github.io/indai.png" height="100" width="150"></p> <div class="dropzone" data-answer="India"></div>
-    <p><img src="https://uber721.github.io/mongolia.png" height="100" width="150"></p> <div class="dropzone" data-answer="Mongolia"></div>
-    <p><img src="https://uber721.github.io/singapore.png" height="100" width="150"></p> <div class="dropzone" data-answer="Singapore"></div>
-    <p><img src="https://uber721.github.io/tajikistan.png" height="100" width="150"></p> <div class="dropzone" data-answer="Tajikistan"></div>
-    <p><img src="https://uber721.github.io/myanmar.png" height="100" width="150"></p> <div class="dropzone" data-answer="Myanmar"></div>
-    <p><img src="https://uber721.github.io/uzbekistan.png" height="100" width="150"></p> <div class="dropzone" data-answer="Uzbekistan"></div>
-    <p><img src="https://uber721.github.io/china.png" height="100" width="150"></p> <div class="dropzone" data-answer="China"></div>
-    <p><img src="https://uber721.github.io/bangladesh.png" height="100" width="150"></p> <div class="dropzone" data-answer="Bangladesh"></div>
-    <p><img src="https://uber721.github.io/bahrain.png" height="100" width="150"></p> <div class="dropzone" data-answer="Bahrain"></div>
-    <p><img src="https://uber721.github.io/maldives.png" height="100" width="150"></p> <div class="dropzone" data-answer="Maldives"></div>
-    <p><img src="https://uber721.github.io/yemen.png" height="100" width="150"></p> <div class="dropzone" data-answer="Yemen"></div>
-    <p><img src="https://uber721.github.io/indonesia.png" height="100" width="150"></p> <div class="dropzone" data-answer="Indonesia"></div>
-    </div>
-<br>
-  <br>
-  <div class="answers">
-    <div class="draggable" style="border:2px solid black" draggable="true" data-value="Bahrain">Bahrain</div>
-    <div class="draggable" style="border:2px solid black" draggable="true" data-value="Bangladesh">Bangladesh</div>
-    <div class="draggable" style="border:2px solid black" draggable="true" data-value="Cambodia">Cambodia</div>
-    <div class="draggable" style="border:2px solid black" draggable="true" data-value="China">China</div>
-    <div class="draggable" style="border:2px solid black" draggable="true" data-value="India">India</div>
-    <div class="draggable" style="border:2px solid black" draggable="true" data-value="Indonesia">Indonesia</div>
-    <div class="draggable" style="border:2px solid black" draggable="true" data-value="Iran">Iran</div>
-    <div class="draggable" style="border:2px solid black" draggable="true" data-value="Lebanon">Lebanon</div>
-    <div class="draggable" style="border:2px solid black" draggable="true" data-value="Maldives">Maldives</div>
-    <div class="draggable" style="border:2px solid black" draggable="true" data-value="Mongolia">Mongolia</div>
-    <div class="draggable" style="border:2px solid black" draggable="true" data-value="Myanmar">Myanmar</div>
-    <div class="draggable" style="border:2px solid black" draggable="true" data-value="Philippines">Philippines</div>
-    <div class="draggable" style="border:2px solid black" draggable="true" data-value="Singapore">Singapore</div>
-    <div class="draggable" style="border:2px solid black" draggable="true" data-value="South Korea">South Korea</div>
-    <div class="draggable" style="border:2px solid black" draggable="true" data-value="Tajikistan">Tajikistan</div>
-    <div class="draggable" style="border:2px solid black" draggable="true" data-value="Uzbekistan">Uzbekistan</div>
-    <div class="draggable" style="border:2px solid black" draggable="true" data-value="Yemen">Yemen</div>
+    <p><img src="https://uber721.github.io/iran.png" height="100" width="150"></p>
+    <select data-answer="Iran">
+      <option value="">--Choose--</option>
+      <option>Bahrain</option>
+      <option>Bangladesh</option>
+      <option>Cambodia</option>
+      <option>China</option>
+      <option>India</option>
+      <option>indonesia</option>
+      <option>Iran</option>
+      <option>Lebanon</option>
+      <option>Maldives</option>
+      <option>Mongolia</option>
+      <option>Myanmar</option>
+      <option>Philippines</option>
+      <option>Singapore</option>
+      <option>South Korea</option>
+      <option>Tajikistan</option>
+      <option>Uzbekistan</option>
+      <option>Yemen</option>
+    </select>
   </div>
 
+  <div class="question">
+    <p><img src="https://uber721.github.io/cambodia.png" height="100" width="150"></p>
+    <select data-answer="Cambodia">
+      <option value="">--Choose--</option>
+      <option>Bahrain</option>
+      <option>Bangladesh</option>
+      <option>Cambodia</option>
+      <option>China</option>
+      <option>India</option>
+      <option>indonesia</option>
+      <option>Iran</option>
+      <option>Lebanon</option>
+      <option>Maldives</option>
+      <option>Mongolia</option>
+      <option>Myanmar</option>
+      <option>Philippines</option>
+      <option>Singapore</option>
+      <option>South Korea</option>
+      <option>Tajikistan</option>
+      <option>Uzbekistan</option>
+      <option>Yemen</option>
+    </select>
+  </div>
+
+    <div class="question">
+    <p><img src="https://uber721.github.io/south korea.png" height="100" width="150"></p>
+    <select data-answer="South Korea">
+      <option value="">--Choose--</option>
+      <option>Bahrain</option>
+      <option>Bangladesh</option>
+      <option>Cambodia</option>
+      <option>China</option>
+      <option>India</option>
+      <option>indonesia</option>
+      <option>Iran</option>
+      <option>Lebanon</option>
+      <option>Maldives</option>
+      <option>Mongolia</option>
+      <option>Myanmar</option>
+      <option>Philippines</option>
+      <option>Singapore</option>
+      <option>South Korea</option>
+      <option>Tajikistan</option>
+      <option>Uzbekistan</option>
+      <option>Yemen</option>
+    </select>
+  </div>
+
+    <div class="question">
+    <p><img src="https://uber721.github.io/philippines.png" height="100" width="150"></p>
+    <select data-answer="Philippines">
+      <option value="">--Choose--</option>
+      <option>Bahrain</option>
+      <option>Bangladesh</option>
+      <option>Cambodia</option>
+      <option>China</option>
+      <option>India</option>
+      <option>indonesia</option>
+      <option>Iran</option>
+      <option>Lebanon</option>
+      <option>Maldives</option>
+      <option>Mongolia</option>
+      <option>Myanmar</option>
+      <option>Philippines</option>
+      <option>Singapore</option>
+      <option>South Korea</option>
+      <option>Tajikistan</option>
+      <option>Uzbekistan</option>
+      <option>Yemen</option>
+    </select>
+  </div>
+
+    <div class="question">
+    <p><img src="https://uber721.github.io/lebanon.png" height="100" width="150"></p>
+    <select data-answer="Lebanon">
+      <option value="">--Choose--</option>
+      <option>Bahrain</option>
+      <option>Bangladesh</option>
+      <option>Cambodia</option>
+      <option>China</option>
+      <option>India</option>
+      <option>indonesia</option>
+      <option>Iran</option>
+      <option>Lebanon</option>
+      <option>Maldives</option>
+      <option>Mongolia</option>
+      <option>Myanmar</option>
+      <option>Philippines</option>
+      <option>Singapore</option>
+      <option>South Korea</option>
+      <option>Tajikistan</option>
+      <option>Uzbekistan</option>
+      <option>Yemen</option>
+    </select>
+  </div>
+
+    <div class="question">
+    <p><img src="https://uber721.github.io/indai.png" height="100" width="150"></p>
+    <select data-answer="India">
+      <option value="">--Choose--</option>
+      <option>Bahrain</option>
+      <option>Bangladesh</option>
+      <option>Cambodia</option>
+      <option>China</option>
+      <option>India</option>
+      <option>indonesia</option>
+      <option>Iran</option>
+      <option>Lebanon</option>
+      <option>Maldives</option>
+      <option>Mongolia</option>
+      <option>Myanmar</option>
+      <option>Philippines</option>
+      <option>Singapore</option>
+      <option>South Korea</option>
+      <option>Tajikistan</option>
+      <option>Uzbekistan</option>
+      <option>Yemen</option>
+    </select>
+  </div>
+
+    <div class="question">
+    <p><img src="https://uber721.github.io/mongolia.png" height="100" width="150"></p>
+    <select data-answer="Mongolia">
+      <option value="">--Choose--</option>
+      <option>Bahrain</option>
+      <option>Bangladesh</option>
+      <option>Cambodia</option>
+      <option>China</option>
+      <option>India</option>
+      <option>indonesia</option>
+      <option>Iran</option>
+      <option>Lebanon</option>
+      <option>Maldives</option>
+      <option>Mongolia</option>
+      <option>Myanmar</option>
+      <option>Philippines</option>
+      <option>Singapore</option>
+      <option>South Korea</option>
+      <option>Tajikistan</option>
+      <option>Uzbekistan</option>
+      <option>Yemen</option>
+    </select>
+  </div>
+
+    <div class="question">
+    <p><img src="https://uber721.github.io/singapore.png" height="100" width="150"></p>
+    <select data-answer="Singapore">
+      <option value="">--Choose--</option>
+      <option>Bahrain</option>
+      <option>Bangladesh</option>
+      <option>Cambodia</option>
+      <option>China</option>
+      <option>India</option>
+      <option>indonesia</option>
+      <option>Iran</option>
+      <option>Lebanon</option>
+      <option>Maldives</option>
+      <option>Mongolia</option>
+      <option>Myanmar</option>
+      <option>Philippines</option>
+      <option>Singapore</option>
+      <option>South Korea</option>
+      <option>Tajikistan</option>
+      <option>Uzbekistan</option>
+      <option>Yemen</option>
+    </select>
+  </div>
+
+    <div class="question">
+    <p><img src="https://uber721.github.io/tajikistan.png" height="100" width="150"></p>
+    <select data-answer="Tajikistan">
+      <option value="">--Choose--</option>
+      <option>Bahrain</option>
+      <option>Bangladesh</option>
+      <option>Cambodia</option>
+      <option>China</option>
+      <option>India</option>
+      <option>indonesia</option>
+      <option>Iran</option>
+      <option>Lebanon</option>
+      <option>Maldives</option>
+      <option>Mongolia</option>
+      <option>Myanmar</option>
+      <option>Philippines</option>
+      <option>Singapore</option>
+      <option>South Korea</option>
+      <option>Tajikistan</option>
+      <option>Uzbekistan</option>
+      <option>Yemen</option>
+    </select>
+  </div>
+
+    <div class="question">
+    <p><img src="https://uber721.github.io/myanmar.png" height="100" width="150"></p>
+    <select data-answer="Myanmar">
+      <option value="">--Choose--</option>
+      <option>Bahrain</option>
+      <option>Bangladesh</option>
+      <option>Cambodia</option>
+      <option>China</option>
+      <option>India</option>
+      <option>indonesia</option>
+      <option>Iran</option>
+      <option>Lebanon</option>
+      <option>Maldives</option>
+      <option>Mongolia</option>
+      <option>Myanmar</option>
+      <option>Philippines</option>
+      <option>Singapore</option>
+      <option>South Korea</option>
+      <option>Tajikistan</option>
+      <option>Uzbekistan</option>
+      <option>Yemen</option>
+    </select>
+  </div>
+
+    <div class="question">
+    <p><img src="https://uber721.github.io/uzbekistan.png" height="100" width="150"></p>
+    <select data-answer="Uzbekistan">
+      <option value="">--Choose--</option>
+      <option>Bahrain</option>
+      <option>Bangladesh</option>
+      <option>Cambodia</option>
+      <option>China</option>
+      <option>India</option>
+      <option>indonesia</option>
+      <option>Iran</option>
+      <option>Lebanon</option>
+      <option>Maldives</option>
+      <option>Mongolia</option>
+      <option>Myanmar</option>
+      <option>Philippines</option>
+      <option>Singapore</option>
+      <option>South Korea</option>
+      <option>Tajikistan</option>
+      <option>Uzbekistan</option>
+      <option>Yemen</option>
+    </select>
+  </div>
+    <div class="question">
+    <p><img src="https://uber721.github.io/china.png" height="100" width="150"></p>
+    <select data-answer="China">
+      <option value="">--Choose--</option>
+      <option>Bahrain</option>
+      <option>Bangladesh</option>
+      <option>Cambodia</option>
+      <option>China</option>
+      <option>India</option>
+      <option>indonesia</option>
+      <option>Iran</option>
+      <option>Lebanon</option>
+      <option>Maldives</option>
+      <option>Mongolia</option>
+      <option>Myanmar</option>
+      <option>Philippines</option>
+      <option>Singapore</option>
+      <option>South Korea</option>
+      <option>Tajikistan</option>
+      <option>Uzbekistan</option>
+      <option>Yemen</option>
+    </select>
+  </div>
+
+    <div class="question">
+    <p><img src="https://uber721.github.io/bangladesh.png" height="100" width="150"></p>
+    <select data-answer="Bangladesh">
+      <option value="">--Choose--</option>
+      <option>Bahrain</option>
+      <option>Bangladesh</option>
+      <option>Cambodia</option>
+      <option>China</option>
+      <option>India</option>
+      <option>indonesia</option>
+      <option>Iran</option>
+      <option>Lebanon</option>
+      <option>Maldives</option>
+      <option>Mongolia</option>
+      <option>Myanmar</option>
+      <option>Philippines</option>
+      <option>Singapore</option>
+      <option>South Korea</option>
+      <option>Tajikistan</option>
+      <option>Uzbekistan</option>
+      <option>Yemen</option>
+    </select>
+  </div>
+
+    <div class="question">
+    <p><img src="https://uber721.github.io/bahrain.png" height="100" width="150"></p>
+    <select data-answer="Bahrain">
+      <option value="">--Choose--</option>
+      <option>Bahrain</option>
+      <option>Bangladesh</option>
+      <option>Cambodia</option>
+      <option>China</option>
+      <option>India</option>
+      <option>indonesia</option>
+      <option>Iran</option>
+      <option>Lebanon</option>
+      <option>Maldives</option>
+      <option>Mongolia</option>
+      <option>Myanmar</option>
+      <option>Philippines</option>
+      <option>Singapore</option>
+      <option>South Korea</option>
+      <option>Tajikistan</option>
+      <option>Uzbekistan</option>
+      <option>Yemen</option>
+    </select>
+  </div>
+
+    <div class="question">
+    <p><img src="https://uber721.github.io/maldives.png" height="100" width="150"></p>
+    <select data-answer="Maldives">
+      <option value="">--Choose--</option>
+      <option>Bahrain</option>
+      <option>Bangladesh</option>
+      <option>Cambodia</option>
+      <option>China</option>
+      <option>India</option>
+      <option>indonesia</option>
+      <option>Iran</option>
+      <option>Lebanon</option>
+      <option>Maldives</option>
+      <option>Mongolia</option>
+      <option>Myanmar</option>
+      <option>Philippines</option>
+      <option>Singapore</option>
+      <option>South Korea</option>
+      <option>Tajikistan</option>
+      <option>Uzbekistan</option>
+      <option>Yemen</option>
+    </select>
+  </div>
+
+    <div class="question">
+    <p><img src="https://uber721.github.io/yemen.png" height="100" width="150"></p>
+    <select data-answer="Yemen">
+      <option value="">--Choose--</option>
+      <option>Bahrain</option>
+      <option>Bangladesh</option>
+      <option>Cambodia</option>
+      <option>China</option>
+      <option>India</option>
+      <option>indonesia</option>
+      <option>Iran</option>
+      <option>Lebanon</option>
+      <option>Maldives</option>
+      <option>Mongolia</option>
+      <option>Myanmar</option>
+      <option>Philippines</option>
+      <option>Singapore</option>
+      <option>South Korea</option>
+      <option>Tajikistan</option>
+      <option>Uzbekistan</option>
+      <option>Yemen</option>
+    </select>
+  </div>
+    <div class="question">
+    <p><img src="https://uber721.github.io/indonesia.png" height="100" width="150"></p>
+    <select data-answer="Indonesia">
+      <option value="">--Choose--</option>
+      <option>Bahrain</option>
+      <option>Bangladesh</option>
+      <option>Cambodia</option>
+      <option>China</option>
+      <option>India</option>
+      <option>indonesia</option>
+      <option>Iran</option>
+      <option>Lebanon</option>
+      <option>Maldives</option>
+      <option>Mongolia</option>
+      <option>Myanmar</option>
+      <option>Philippines</option>
+      <option>Singapore</option>
+      <option>South Korea</option>
+      <option>Tajikistan</option>
+      <option>Uzbekistan</option>
+      <option>Yemen</option>
+    </select>
+  </div>
   <button id="mark-btn">Mark Answer</button>
 
   <script>
-    const draggables = document.querySelectorAll('.draggable');
-    const dropzones = document.querySelectorAll('.dropzone');
-
-    draggables.forEach(item => {
-      item.addEventListener('dragstart', e => {
-        e.dataTransfer.setData('text/plain', item.dataset.value);
-        e.dataTransfer.setData('text/html', item.outerHTML);
-      });
-    });
-
-    dropzones.forEach(zone => {
-      zone.addEventListener('dragover', e => e.preventDefault());
-
-      zone.addEventListener('drop', e => {
-        e.preventDefault();
-        const droppedValue = e.dataTransfer.getData('text/plain');
-        zone.textContent = droppedValue;
-        zone.dataset.userAnswer = droppedValue;
-        zone.classList.remove('correct', 'incorrect');
-      });
-    });
-
     document.getElementById('mark-btn').addEventListener('click', () => {
-      dropzones.forEach(zone => {
-        const correct = zone.dataset.answer.toLowerCase();
-        const user = (zone.dataset.userAnswer || '').toLowerCase();
+      document.querySelectorAll('select').forEach(select => {
+        const correct = select.dataset.answer.toLowerCase();
+        const user = (select.value || '').toLowerCase();
 
+        select.classList.remove('correct', 'incorrect');
         if (user === correct) {
-          zone.classList.add('correct');
-          zone.classList.remove('incorrect');
+          select.classList.add('correct');
         } else {
-          zone.classList.add('incorrect');
-          zone.classList.remove('correct');
+          select.classList.add('incorrect');
         }
       });
     });
   </script>
-
 </body>
 </html>
