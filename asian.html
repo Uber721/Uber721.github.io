@@ -35,23 +35,49 @@
   border: 2px solid red;
   background-color: #ffe6e6;
 }
-      .dropzone {
-  width: 200px;
-  height: 40px;
-  border: 2px dashed #ccc;
-  margin: 10px 0;
-  text-align: center;
-  line-height: 40px;
-}
+       .question {
+      margin-bottom: 20px;
+    }
 
-.dragging {
-  padding: 10px;
-  margin: 5px;
-  background-color: #2ecc71;
-  color: white;
-  cursor: grab;
-  border-radius: 5px;
-}
+    .dropzone {
+      width: 300px;
+      height: 50px;
+      border: 2px dashed #ccc;
+      margin-top: 10px;
+      text-align: center;
+      line-height: 50px;
+      font-weight: bold;
+      background-color: #f9f9f9;
+    }
+
+    .dragging {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 5px;
+      background-color: #2ecc71;
+      color: white;
+      border-radius: 5px;
+      cursor: grab;
+    }
+          .buttoncorrect {
+      border-color: green;
+      background-color: #e6ffe6;
+    }
+
+    .buttonincorrect {
+      border-color: red;
+      background-color: #ffe6e6;
+    }
+
+    #mark-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+
+
+
+
    </style>
   </head>
   <body>
@@ -61,34 +87,51 @@
     <h1> Asian Countries</h1>
     <p>These are some Asian countries. Guess them!</p>
     <div class="question">
-  <p>Asia</p>
-  <div class="dropzone" data-answer="Asia"></div>
-</div>
+    <p>Which ingredient is essential in pesto?</p>
+    <div class="dropzone" data-answer="Asia"></div>
+  </div>
 
-<div class="answers">
-  <div class="dragging" draggable="true" data-value="Asia">Asia</div>
-</div>
+  <div class="answers">
+    <div class="dragging" dragging="true" data-value="Asia">Asia</div>
+  </div>
+
+  <button id="mark-btn">Mark Answer</button>
     <script>
-      document.querySelectorAll('.dragging').forEach(item => {
-  item.addEventListener('dragstart', e => {
-    e.dataTransfer.setData('text/plain', item.dataset.value);
-  });
-});
+      const dragging = document.querySelectorAll('.dragging');
+    const dropzones = document.querySelectorAll('.dropzone');
 
-document.querySelectorAll('.dropzone').forEach(zone => {
-  zone.addEventListener('dragover', e => e.preventDefault());
+    dragging.forEach(item => {
+      item.addEventListener('dragstart', e => {
+        e.dataTransfer.setData('text/plain', item.dataset.value);
+        e.dataTransfer.setData('text/html', item.outerHTML);
+      });
+    });
 
-  zone.addEventListener('drop', e => {
-    e.preventDefault();
-    const droppedValue = e.dataTransfer.getData('text/plain');
-    zone.textContent = droppedValue;
+    dropzones.forEach(zone => {
+      zone.addEventListener('dragover', e => e.preventDefault());
 
-    if (droppedValue === zone.dataset.answer) {
-      zone.style.borderColor = 'green';
-    } else {
-      zone.style.borderColor = 'red';
-    }
-  });
-});
-    </script>
+      zone.addEventListener('drop', e => {
+        e.preventDefault();
+        const droppedValue = e.dataTransfer.getData('text/plain');
+        zone.textContent = droppedValue;
+        zone.dataset.userAnswer = droppedValue;
+        zone.classList.remove('correct', 'incorrect');
+      });
+    });
+
+    document.getElementById('mark-btn').addEventListener('click', () => {
+      dropzones.forEach(zone => {
+        const correct = zone.dataset.answer.toLowerCase();
+        const user = (zone.dataset.userAnswer || '').toLowerCase();
+
+        if (user === correct) {
+          zone.classList.add('buttoncorrect');
+          zone.classList.remove('buttonincorrect');
+        } else {
+          zone.classList.add('buttonincorrect');
+          zone.classList.remove('buttoncorrect');
+        }
+      });
+    });
+  </script>
 </html>
