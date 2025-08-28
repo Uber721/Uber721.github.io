@@ -1,41 +1,17 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Asia</title>
-    <meta charset="UTF-8">
-    <style> 
-     body {
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ASia</title>
+  <style>
+body {
       font-family: 'Times New Roman', Times, serif;
     }
-     img {
-       text-align: left; border: 2px solid black;
-     }
-     
-    .draggable {
-      position: absolute;
-      cursor: grab;
-      padding: 10px 20px;
-      background-color: #ffffff;
-      color: white;
-      border: 2px solid black;
-      border-radius: 6px;
-      user-select: none;
+    img {
+      text-align: left; border: 2px solid black
     }
 
-    .draggable.dragging {
-      cursor: grabbing;
-    }
-
-    .correct {
-  border: 2px solid green;
-  background-color: #e6ffe6;
-}
-
-.incorrect {
-  border: 2px solid red;
-  background-color: #ffe6e6;
-}
-       .question {
+    .question {
       margin-bottom: 20px;
     }
 
@@ -50,21 +26,24 @@
       background-color: #f9f9f9;
     }
 
-    .dragging {
+    .draggable {
       display: inline-block;
       padding: 10px 20px;
       margin: 5px;
-      background-color: #2ecc71;
-      color: white;
+      background-color: #ffffff;
+      color: solid black;
+      border: 2px solid black
+      width: 200px
       border-radius: 5px;
       cursor: grab;
     }
-          .buttoncorrect {
+
+    .correct {
       border-color: green;
       background-color: #e6ffe6;
     }
 
-    .buttonincorrect {
+    .incorrect {
       border-color: red;
       background-color: #ffe6e6;
     }
@@ -74,33 +53,29 @@
       padding: 10px 20px;
       font-size: 16px;
     }
-
-
-
-
-   </style>
-  </head>
-  <body>
-    <div style="text-align: center;">
-     <h1 style="font-size: 30px;">Asian Cuisine</h1>
-    </div>
-    <h1> Asian Countries</h1>
-    <p>These are some Asian countries. Guess them!</p>
-    <div class="question">
-    <p>Which ingredient is essential in pesto?</p>
-    <div class="dropzone" data-answer="Asia"></div>
+  </style>
+</head>
+<body>
+<h1 style="font-size: 30px; text-alignment: centre;"> Asian Cuisine </h1>
+  <br>
+  <h1> Asian Countries</h1>
+  <p>Drag and Drop your guesses of some Asian countries!</p>
+  <div class="question">
+    <p>ASia</p>
+    <div class="dropzone" data-answer="ASia"></div>
   </div>
 
   <div class="answers">
-    <div class="dragging" draggable="true" data-value="Asia">Asia</div>
+    <div class="draggable" draggable="true" data-value="Asia">Asia</div>
   </div>
 
   <button id="mark-btn">Mark Answer</button>
-    <script>
-      const dragging = document.querySelectorAll('.dragging');
+
+  <script>
+    const draggables = document.querySelectorAll('.draggable');
     const dropzones = document.querySelectorAll('.dropzone');
 
-    dragging.forEach(item => {
+    draggables.forEach(item => {
       item.addEventListener('dragstart', e => {
         e.dataTransfer.setData('text/plain', item.dataset.value);
         e.dataTransfer.setData('text/html', item.outerHTML);
@@ -125,13 +100,15 @@
         const user = (zone.dataset.userAnswer || '').toLowerCase();
 
         if (user === correct) {
-          zone.classList.add('buttoncorrect');
-          zone.classList.remove('buttonincorrect');
+          zone.classList.add('correct');
+          zone.classList.remove('incorrect');
         } else {
-          zone.classList.add('buttonincorrect');
-          zone.classList.remove('buttoncorrect');
+          zone.classList.add('incorrect');
+          zone.classList.remove('correct');
         }
       });
     });
   </script>
+
+</body>
 </html>
