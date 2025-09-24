@@ -466,7 +466,7 @@
   <img style="text-align: left;" src="https://uber721.github.io/tfu.jpg" width = "100" height = "100"> <input type="text" class="answer" data-correct="tofu" placeholder="Ingredient 1"> <br>
   <img style="text-align: left;" src="https://uber721.github.io/seaweed.jpg" width = "100" height = "100"> <input type="text" class="answer" data-correct="seaweed" placeholder="Ingredient 1"> <br>
   <img style="text-align: left;" src="https://uber721.github.io/bok choy.jpg" width = "100" height = "100"> <input type="text" class="answer" data-correct="bok choy" placeholder="Ingredient 1"> <br>
-  <img style="text-align: left;" src="https://uber721.github.io/mushrooms.jpg" width = "100" height = "100"> <input type="text" class="answer" data-correct="mushrooms" placeholder="Ingredient 1"> <br>
+  <img style="text-align: left;" src="https://uber721.github.io/mushrooms.jpg" width = "100" height = "100"> <input type="text" class="answer" data-correct="mushrooms" data-differentcorrect="highschrroms" placeholder="Ingredient 1"> <br>
   <img style="text-align: left;" src="https://uber721.github.io/bean sprouts.jpg" width = "100" height = "100"> <input type="text" class="answer" data-correct="bean sprouts" placeholder="Ingredient 1"> <br>
   <button onclick="checkAllAnswers()">Check Answers</button>
   <br>
@@ -521,9 +521,15 @@
         function checkAllAnswers() {
   document.querySelectorAll('.answer').forEach(input => {
     const correctAnswer = input.dataset.correct.toLowerCase();
+    const differentcorrectAnswer = input.dataset.differentcorrect.toLowerCase();
     const userAnswer = input.value.trim().toLowerCase();
 
     if (userAnswer === correctAnswer) {
+      input.classList.remove("incorrect");
+      input.classList.add("correct");
+    } 
+    
+    if (userAnswer === differentcorrectAnswer) {
       input.classList.remove("incorrect");
       input.classList.add("correct");
     } else {
