@@ -8,7 +8,7 @@
       font-family: 'Times New Roman', Times, serif;
     }
      img {
-       text-align: left; border: 2px solid black;
+       text-align: left; border: 2px solid black; 
      }
           .correct {
   border: 2px solid green;
@@ -19,11 +19,106 @@
   border: 2px solid red;
   background-color: #ffe6e6;
 }
+      
+    .column {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .word-box {
+      width: 150px;
+      height: 100px;
+      border: 2px dashed #aaa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f9f9f9;
+      font-weight: bold;
+    }
+
+    .image-box {
+      width: 150px;
+      height: 100px;
+      border: 2px solid #ccc;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: grab;
+    }
+
+    .image-box img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
       </style>
     </head>
   <body>
     <div style="text-align: center;">
      <h1 style="font-size: 30px;">Indian Cuisine</h1>
     </div>
-    
+<h1>Commonly Used Indian Ingredients</h1>
+    <ul>
+<li><img src="Uber721.github.io/spices.jpg" height="100" wodth="100">Spices</li>
+<li><img src="Uber721.github.io/onions.jpg" height="100" wodth="100">Onion</li>
+<li><img src="Uber721.github.io/garlic.jpg" height="100" wodth="100">Garlic</li>
+<li><img src="Uber721.github.io/chillies.jpg" height="100" wodth="100">Chillies</li>
+<li><img src="Uber721.github.io/curry leaves.jpg" height="100" wodth="100">Curry Leaves</li>
+<li><img src="Uber721.github.io/rice.jpg" height="100" wodth="100">Rice</li>
+<li><img src="Uber721.github.io/lentils.jpg" height="100" wodth="100">Lentils</li>
+<li><img src="Uber721.github.io/chickpeas.jpg" height="100" wodth="100">Chickpeas</li>
+<li><img src="Uber721.github.io/yoghurt.jpg" height="100" wodth="100">Yogurt</li>
+</p>
+    </ul>
+    <div class="column" id="words">
+    <div class="word-box" data-answer="sushi">Sushi</div>
+    <div class="word-box" data-answer="tacos">Tacos</div>
+    <div class="word-box" data-answer="pasta">Pasta</div>
+  </div>
+
+  <div class="column" id="images">
+    <div class="image-box" draggable="true" data-value="tacos">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Tacos_de_carnitas.jpg" alt="Tacos">
+    </div>
+    <div class="image-box" draggable="true" data-value="pasta">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Pasta_2006_1.jpg" alt="Pasta">
+    </div>
+    <div class="image-box" draggable="true" data-value="sushi">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Sushi_platter.jpg" alt="Sushi">
+    </div>
+  </div>
+
+<script>
+    const imageBoxes = document.querySelectorAll('.image-box');
+    const wordBoxes = document.querySelectorAll('.word-box');
+
+    imageBoxes.forEach(img => {
+      img.addEventListener('dragstart', e => {
+        e.dataTransfer.setData('text/plain', img.dataset.value);
+        e.dataTransfer.setData('elementId', img.id);
+      });
+    });
+
+    wordBoxes.forEach(box => {
+      box.addEventListener('dragover', e => e.preventDefault());
+
+      box.addEventListener('drop', e => {
+        e.preventDefault();
+        const value = e.dataTransfer.getData('text/plain');
+        box.textContent = '';
+        box.appendChild(document.querySelector(`[data-value="${value}"]`));
+
+        if (value === box.dataset.answer) {
+          box.classList.add('correct');
+          box.classList.remove('incorrect');
+        } else {
+          box.classList.add('incorrect');
+          box.classList.remove('correct');
+        }
+      });
+    });
+  </script>
+
 </html>
