@@ -58,12 +58,106 @@
   <h1>Commonly Used Equipment</h1>
     <p><img src="https://uber721.github.io/kadai.jpg" width="100" height="100" > This a Kadai. It is sort of like a wok. It is a deep, round bottomed pan, oerfect for frying, sauteing, and curries. </p>
     <p><img src="https://uber721.github.io/tawa.jpg" width="100" height="100" > This is a tawa. It is a flat pan. It is used to make various flatbreads. </p>
-    <p><img src="https://uber721.github.io/pressure cooker.jpg" width="100" height="100" > This is a pressure cooker. It is used to cook things like lentils, beans and rice quickly. A pressure cooker works by trapping steam inside a sealed pot, which increases the internal pressure and raises the water's boiling point from \(100^{\circ }C\) (\(212^{\circ }F\)) to about \(121^{\circ }C\) (\(250^{\circ }F\)). This higher temperature cooks food much faster than conventional methods</p>
+    <p><img src="https://uber721.github.io/pressure cooker.jpg" width="100" height="100" > This is a pressure cooker. It is used to cook things like lentils, beans and rice quickly. A pressure cooker works by trapping steam inside a sealed pot, which increases the internal pressure and raises the water's boiling point from 100 degrees celcius to about 120 degrees celcius. This higher temperature cooks food much faster than conventional methods</p>
+    <p><img src="https://uber721.github.io/handi.jpg" width="100" height="100" >This is a handi. Its quite handy to store and slow-cook foods.</p>
+    <p><img src="https://uber721.github.io/chakla.jpg" width="100" height="100" >This is a chakla. It is a flat rolling board that is used to roll and create flatbreads.  </p>
+    <p><img src="https://uber721.github.io/sil batta.jpg" width="100" height="100" >This is a Sil Batta. It consists of a flat stone and a cylindrical stone roller. It is used to crush spices and herbs.  </p>
+
+    <br>
+    <h1> Can You Match The Different Food Preperation Techniques?!?!?</h1>
+    <div class="question">
+    <p>Ingredients are sealed and cooked over low heat for hours.</p>
+    <select data-answer="Slow Cooking">
+      <option value="">--Choose--</option>
+      <option>Deep Frying</option>
+      <option>Marination</option>
+      <option>Roasting</option>
+      <option>Simmering</option>
+      <option>Slow Cooking</option>
+      <option>Steaming</option>
+    </select>
+        </div>
+          <div class="question">
+    <p>Meat or vegetables are soaked in a spiced yogurt or acidic mixture.</p>
+    <select data-answer="Marination">
+      <option value="">--Choose--</option>
+      <option>Deep Frying</option>
+      <option>Marination</option>
+      <option>Roasting</option>
+      <option>Simmering</option>
+      <option>Slow Cooking</option>
+      <option>Steaming</option>
+    </select>
+              </div>
+                <div class="question">
+    <p>Spices and ingredients are sautéed until oil separates.</p>
+    <select data-answer="Roasting">
+      <option value="">--Choose--</option>
+      <option>Deep Frying</option>
+      <option>Marination</option>
+      <option>Roasting</option>
+      <option>Simmering</option>
+      <option>Slow Cooking</option>
+      <option>Steaming</option>
+    </select>
+                    </div>
+                      <div class="question">
+    <p>Cooking food with steam, often in covered vessels.</p>
+    <select data-answer="Steaming">
+      <option value="">--Choose--</option>
+      <option>Deep Frying</option>
+      <option>Marination</option>
+      <option>Roasting</option>
+      <option>Simmering</option>
+      <option>Slow Cooking</option>
+      <option>Steaming</option>
+    </select>
+                          </div>
+                            <div class="question">
+    <p>Food is submerged in hot oil until crisp.</p>
+    <select data-answer="Deep Frying">
+      <option value="">--Choose--</option>
+      <option>Deep Frying</option>
+      <option>Marination</option>
+      <option>Roasting</option>
+      <option>Simmering</option>
+      <option>Slow Cooking</option>
+      <option>Steaming</option>
+    </select>
+                                </div>
+                                  <div class="question">
+    <p>- Gentle cooking over low heat to meld flavors.</p>
+    <select data-answer="simmering">
+      <option value="">--Choose--</option>
+      <option>Deep Frying</option>
+      <option>Marination</option>
+      <option>Roasting</option>
+      <option>Simmering</option>
+      <option>Slow Cooking</option>
+      <option>Steaming</option>
+    </select>  </div>
+      <button id="mark-btn">Mark Answer</button>
+    
 
 
 
 
 <script>
+      document.getElementById('mark-btn').addEventListener('click', () => {
+      document.querySelectorAll('select').forEach(select => {
+        const correct = select.dataset.answer.toLowerCase();
+        const user = (select.value || '').toLowerCase();
+
+        select.classList.remove('correct', 'incorrect');
+        if (user === correct) {
+          select.classList.add('correct');
+        } else {
+          select.classList.add('incorrect');
+        }
+      });
+    });
+
+  
   function checkAllAnswers() {
     document.querySelectorAll('.answer').forEach(input => {
       const correctAnswer = (input.dataset.correct || "").toLowerCase();
