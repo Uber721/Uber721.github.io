@@ -59,33 +59,21 @@
 
 
 <script>
-    select.classList.remove('correct', 'incorrect');
-        if (user === correct) {
-          select.classList.add('correct');
-        } else {
-          select.classList.add('incorrect');
-        }
-      });
+  function checkAllAnswers() {
+    document.querySelectorAll('.answer').forEach(input => {
+      const correctAnswer = (input.dataset.correct || "").toLowerCase();
+      const differentcorrectAnswer = (input.dataset.differentcorrect || "").toLowerCase();
+      const userAnswer = input.value.trim().toLowerCase();
+
+      if (userAnswer === correctAnswer || userAnswer === differentcorrectAnswer) {
+        input.classList.remove("incorrect");
+        input.classList.add("correct");
+      } else {
+        input.classList.remove("correct");
+        input.classList.add("incorrect");
+      }
     });
-        function checkAllAnswers() {
-  document.querySelectorAll('.answer').forEach(input => {
-    const correctAnswer = input.dataset.correct.toLowerCase();
-    const differentcorrectAnswer = input.dataset.differentcorrect.toLowerCase();
-    const userAnswer = input.value.trim().toLowerCase();
-
-    if (userAnswer === correctAnswer) {
-      input.classList.remove("incorrect");
-      input.classList.add("correct");
-    } else  if (userAnswer === differentcorrectAnswer) {
-      input.classList.remove("incorrect");
-      input.classList.add("correct");
-    } else {
-      input.classList.remove("correct");
-      input.classList.add("incorrect");
-    }
-  });
-}
-
+  }
 </script>
 
 </html>
