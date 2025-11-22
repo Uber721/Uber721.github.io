@@ -61,8 +61,8 @@
 
       const x = Math.random() * maxX;
       const y = Math.random() * maxY;
-      const dx = 2 + Math.random() * 2;
-      const dy = 2 + Math.random() * 2;
+      const dx = 4 + Math.random() * 4;
+      const dy = 4 + Math.random() * 4;
 
       bouncers.push({ el: link, x, y, dx, dy });
 
@@ -74,6 +74,9 @@
       bouncers.forEach(b => {
         const w = window.innerWidth - b.el.offsetWidth;
         const h = window.innerHeight - b.el.offsetHeight;
+
+        dx -= 2
+        dy -= 2
 
         b.x += b.dx;
         b.y += b.dy;
