@@ -74,9 +74,14 @@
       bouncers.forEach(b => {
         const w = window.innerWidth - b.el.offsetWidth;
         const h = window.innerHeight - b.el.offsetHeight;
+        const outer = window.outerWidth
 
-        b.dx -= 2;
-        b.dy -= 2;
+        if (b.dx => 0)  {
+        b.dx -= 0.1;
+        b.dy -= 0.1;
+        } else {
+        b.dx + 0.1;
+        b.dy + 0.1;
 
         b.x += b.dx;
         b.y += b.dy;
