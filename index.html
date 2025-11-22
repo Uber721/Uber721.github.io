@@ -82,9 +82,11 @@
         } else {
         b.dx + 0.1;
         b.dy + 0.1;
+        }
 
         b.x += b.dx;
         b.y += b.dy;
+        
 
         if (b.x <= 0 || b.x >= w) b.dx *= -1;
         if (b.y <= 0 || b.y >= h) b.dy *= -1;
