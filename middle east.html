@@ -1,0 +1,223 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Middle Eastern Cuisine</title>
+    <meta charset="UTF-8">
+    <style> 
+     body {
+      font-family: 'Times New Roman', Times, serif;
+    }
+     img {
+       text-align: left; border: 2px solid black; 
+     }
+          .correct {
+  border: 2px solid green;
+  background-color: #e6ffe6;
+}
+
+.incorrect {
+  border: 2px solid red;
+  background-color: #ffe6e6;
+}
+          #mark-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+          img-fader{
+      width: 150px;
+      height: 150px;
+      border: 2px solid black;
+      cursor: pointer;
+      transition: opacity 2s ease; /* Smooth fade over 2 seconds */
+    }
+
+    .fade {
+      opacity: 0; /* Target state after fade */
+
+      </style> 
+  </head>
+  <body>
+      <div style="text-align: center;">
+     <h1 style="font-size: 30px;">Middle Eastern Cuisine</h1>
+    </div>
+  <h2> Middle Eastern Countries</h2>
+  <p>Can you name these Middle Eastern Countries</p>
+     <div class="question">
+    <p><img src="https://uber721.github.io/cyprus.png" height="100" width="150"></p>
+    <select data-answer="Cyprus">
+      <option value="">--Choose--</option>
+      <option>Cyprus</option>
+      <option>Iraq</option>
+      <option>Israel</option>
+      <option>Jordan</option>
+      <option>Kuwait</option>
+      <option>Owan</option>
+      <option>Syria</option>
+      <option>United Arab Emirates</option>
+    </select>
+  </div>
+
+       <div class="question">
+    <p><img src="https://uber721.github.io/iraq.png" height="100" width="150"></p>
+    <select data-answer="Iraq">
+      <option value="">--Choose--</option>
+      <option>Cyprus</option>
+      <option>Iraq</option>
+      <option>Israel</option>
+      <option>Jordan</option>
+      <option>Kuwait</option>
+      <option>Owan</option>
+      <option>Syria</option>
+      <option>United Arab Emirates</option>
+    </select>
+  </div>
+
+           <div class="question">
+    <p><img src="https://uber721.github.io/jordan.png" height="100" width="150"></p>
+    <select data-answer="Jordan">
+      <option value="">--Choose--</option>
+      <option>Cyprus</option>
+      <option>Iraq</option>
+      <option>Israel</option>
+      <option>Jordan</option>
+      <option>Kuwait</option>
+      <option>Owan</option>
+      <option>Syria</option>
+      <option>United Arab Emirates</option>
+    </select>
+  </div>
+
+               <div class="question">
+    <p><img src="https://uber721.github.io/kuwait.png" height="100" width="150"></p>
+    <select data-answer="Kuwait">
+      <option value="">--Choose--</option>
+      <option>Cyprus</option>
+      <option>Iraq</option>
+      <option>Israel</option>
+      <option>Jordan</option>
+      <option>Kuwait</option>
+      <option>Owan</option>
+      <option>Syria</option>
+      <option>United Arab Emirates</option>
+    </select>
+  </div>
+
+                   <div class="question">
+    <p><img src="https://uber721.github.io/owan.png" height="100" width="150"></p>
+    <select data-answer="Owan">
+      <option value="">--Choose--</option>
+      <option>Cyprus</option>
+      <option>Iraq</option>
+      <option>Israel</option>
+      <option>Jordan</option>
+      <option>Kuwait</option>
+      <option>Owan</option>
+      <option>Syria</option>
+      <option>United Arab Emirates</option>
+    </select>
+  </div>
+
+                   <div class="question">
+    <p><img src="https://uber721.github.io/syria.webp" height="100" width="150"></p>
+    <select data-answer="Syria">
+      <option value="">--Choose--</option>
+      <option>Cyprus</option>
+      <option>Iraq</option>
+      <option>Israel</option>
+      <option>Jordan</option>
+      <option>Kuwait</option>
+      <option>Owan</option>
+      <option>Syria</option>
+      <option>United Arab Emirates</option>
+    </select>
+  </div>
+
+                       <div class="question">
+    <p><img src="https://uber721.github.io/UAE.webp" height="100" width="150"></p>
+    <select data-answer="United Arab Emirates">
+      <option value="">--Choose--</option>
+      <option>Cyprus</option>
+      <option>Iraq</option>
+      <option>Israel</option>
+      <option>Jordan</option>
+      <option>Kuwait</option>
+      <option>Owan</option>
+      <option>Syria</option>
+      <option>United Arab Emirates</option>
+    </select>
+  </div>
+
+
+                               <div class="question">
+    <p><img src="https://uber721.github.io/israel.webp" height="100" width="150"></p>
+    <select data-answer="Israel">
+      <option value="">--Choose--</option>
+      <option>Cyprus</option>
+      <option>Iraq</option>
+      <option>Israel</option>
+      <option>Jordan</option>
+      <option>Kuwait</option>
+      <option>Owan</option>
+      <option>Syria</option>
+      <option>United Arab Emirates</option>
+    </select>
+  </div>
+  <button id="mark-btn">Mark Answer</button>
+    <br>
+    <br>
+    <h2>What Are Some of the Middles East's Most Common Ingredients.</h2>
+    <img src="https://uber721.github.io/cumin.jpg"><input type="text" class="answer" data-correct="cumin" data-differentcorrect="highschrroms"placeholder="Ingredient 1"> <br>
+    <img src="https://uber721.github.io/sumac.jpg"><input type="text" class="answer" data-correct="sumac" data-differentcorrect="highschrroms"placeholder="Ingredient 1"> <br>
+    <img src="https://uber721.github.io/parsley.jpg"><input type="text" class="answer" data-correct="parsley" data-differentcorrect="highschrroms"placeholder="Ingredient 1"> <br>
+    <img src="https://uber721.github.io/mint.jpg"><input type="text" class="answer" data-correct="mint" data-differentcorrect="highschrroms"placeholder="Ingredient 1"> <br>
+      <img src="https://uber721.github.io/rice.jpg"><input type="text" class="answer" data-correct="rice" data-differentcorrect="highschrroms"placeholder="Ingredient 1"> <br>
+      <img src="https://uber721.github.io/dates.jpg"><input type="text" class="answer" data-correct="dates" data-differentcorrect="highschrroms"placeholder="Ingredient 1"> <br>
+      <img src="https://uber721.github.io/pomegranate.jpg"><input type="text" class="answer" data-correct="pomegranate" data-differentcorrect="pomegranite"placeholder="Ingredient 1"> <br>
+      <img src="https://uber721.github.io/cumin.jpg"><input type="text" class="answer" data-correct="cumin" data-differentcorrect="highschrroms"placeholder="Ingredient 1"> <br>
+      <img src="https://uber721.github.io/pita bread.jpg"><input type="text" class="answer" data-correct="pita bread" data-differentcorrect="highschrroms"placeholder="Ingredient 1"> <br>
+
+    <br>
+<h2> Equipment Used in Middle East </h2>
+    <p>Click on the images to reveal the answers.</p>
+    <img src="https://uber721.github.io/pita bread.jpg" style="top:1000px;">
+  </body>
+    
+  <script>
+        document.getElementById('mark-btn').addEventListener('click', () => {
+      document.querySelectorAll('select').forEach(select => {
+        const correct = select.dataset.answer.toLowerCase();
+        const user = (select.value || '').toLowerCase();
+
+        select.classList.remove('correct', 'incorrect');
+        if (user === correct) {
+          select.classList.add('correct');
+        } else {
+          select.classList.add('incorrect');
+        }
+      });
+    });
+        function checkAllAnswers() {
+  document.querySelectorAll('.answer').forEach(input => {
+    const correctAnswer = input.dataset.correct.toLowerCase();
+    const differentcorrectAnswer = input.dataset.differentcorrect.toLowerCase();
+    const userAnswer = input.value.trim().toLowerCase();
+
+    if (userAnswer === correctAnswer) {
+      input.classList.remove("incorrect");
+      input.classList.add("correct");
+    } else  if (userAnswer === differentcorrectAnswer) {
+      input.classList.remove("incorrect");
+      input.classList.add("correct");
+    } else {
+      input.classList.remove("correct");
+      input.classList.add("incorrect");
+    }
+  });
+}
+
+function fadeImage(element) {
+      element.classList.add("fade")
+}
+  </script>
+</html>
