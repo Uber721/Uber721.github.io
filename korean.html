@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Korean Cuisine</title>
+    <meta charset="UTF-8">
+    <style> 
+      .hidden-text {
+  display: none; /* start hidden */
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.show {
+  display: block; /* reveal when toggled */
+}
+     body {
+      font-family: 'Times New ROman', Times, serif;
+    }
+     img {
+       text-align: left;  border: 2px solid black; 
+     }
+          .correct {
+  border: 2px solid green;
+  background-color: #e6ffe6;
+}
+
+.incorrect {
+  border: 2px solid red;
+  background-color: #ffe6e6;
+}
+          #mark-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+ .img-fade {
+  width: 150px;
+  height: 150px;
+  border: 2px solid black;
+  cursor: pointer;
+  transition: opacity 2s ease; /* Smooth fade */
+}
+
+.img-fade.fade {
+  opacity: 0; /* Faded state */
+}
+
+      </style> 
+  </head>
+   <body>
+      <div style="text-align: center;">
+     <h1 style="font-size: 30px;">Korean Cuisine</h1>
+    </div>
+  <br>
+  <h2>Can You Guess Some Commonly Used Korean Ingredients?!?!?!?</h2>
+  <img src="https://uber721.github.io/gochujang.jpg" width="100" height="100"><input type="text" class="answer" data-correct="gochujang" data-differentcorrect="highschrroms"placeholder="Ingredient 1"> <br>
+  <img src="https://uber721.github.io/fish sauce.jpg" width="100" height="100"><input type="text" class="fish sauce" data-correct="fish sauce" data-differentcorrect="highschrroms"placeholder="Ingredient 1"> <br>
+   <img src="https://uber721.github.io/spring onions.jpg" width="100" height="100"><input type="text" class="answer" data-correct="spring onion" data-differentcorrect="spring onions"placeholder="Ingredient 1"> <br>
+      <img src="https://uber721.github.io/rice.jpg" width="100" height="100"><input type="text" class="answer" data-correct="rice" data-differentcorrect="highschrroms"placeholder="Ingredient 1"> <br>
+      <img src="https://uber721.github.io/bean sprouts.jpg" width="100" height="100"><input type="text" class="answer" data-correct="bean sprouts" data-differentcorrect="highschrroms"placeholder="Ingredient 1"> <br>
+      <img src="https://uber721.github.io/kimchi.jpg" width="100" height="100"><input type="text" class="answer" data-correct="kimchi" data-differentcorrect="highschrroms"placeholder="Ingredient 1"> <br>
+     <img src="https://uber721.github.io/seaweed.jpg" width="100" height="100"><input type="text" class="answer" data-correct="seaweed" data-differentcorrect="highschrroms"placeholder="Ingredient 1"> <br>
+     <img src="https://uber721.github.io/sesame seeds.jpg" width="100" height="100"><input type="text" class="answer" data-correct="sesame seeds" data-differentcorrect="highschrroms"placeholder="Ingredient 1"> <br>
+      <button onclick="checkAllAnswers()">Check Answers</button>
+      
