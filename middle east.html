@@ -4,15 +4,6 @@
     <title>Middle Eastern Cuisine</title>
     <meta charset="UTF-8">
     <style> 
-      .hidden-text {
-  display: none; /* Start hidden */
-  font-style: italic;
-  margin-top: 10px;
-}
-
-.show {
-  display: block; /* Reveal when toggled */
-}
      body {
       font-family: 'Times New Roman', Times, serif;
     }
@@ -190,13 +181,7 @@
     <br>
 <h2> Equipment Used in Middle East </h2>
 <p>Click on the images to reveal the answers.</p>
-
-<div class="reveal-box">
-  <img src="https://uber721.github.io/pita bread.jpg" 
-       class="img-fade" 
-       onclick="showText(this)">
-  <p class="hidden-text">This is pita bread, a staple in Middle Eastern cuisine.</p>
-</div>
+  <p>Pita Bread</p><button class="draggable" style="left: 0px; top: 1000px;"><img src="https://uber721.github.io/pita bread.jpg" class="img-fade" onclick="fadeImage(this)"></button>
   </body>
     
   <script>
@@ -234,10 +219,6 @@
 
 function fadeImage(element) {
       element.classList.add("fade")
-}
-    function showText(element) {
-  const text = element.nextElementSibling;
-  text.classList.toggle("show");
 }
   </script>
 </html>
