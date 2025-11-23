@@ -8,7 +8,6 @@
   display: none; /* start hidden */
   margin-top: 10px;
   font-weight: bold;
-  color: darkred;
 }
 
 .show {
@@ -198,7 +197,7 @@
   <img src="https://uber721.github.io/pita bread.jpg" 
        id="img_fade" 
        class="img-fade" 
-       onclick="fadeImage(this)">
+       onclick="fadeImage(this,info)">
   <p id="info" class="hidden-text">Pita Bread</p>
 </div>
   </body>
@@ -236,9 +235,9 @@
   });
 }
 
-function fadeImage(image) {
+function fadeImage(image,info) {
   image.classList.add("fade"); // fade the image
-  const text = document.getElementById("info");
+  const text = document.getElementById(info);
   text.classList.add("show");  // reveal the text
 }
   </script>
