@@ -181,7 +181,9 @@
     <br>
 <h2> Equipment Used in Middle East </h2>
 <p>Click on the images to reveal the answers.</p>
-  <button class="draggable" style="left: 0px; top: 1000px;"><p>Pita Bread</p><img src="https://uber721.github.io/pita bread.jpg" class="img-fade" onclick="fadeImage(this)"></button>
+    <div onclick="imageFade(img_fade,info)>
+  <p id="info">Pita Bread</p><img src="https://uber721.github.io/pita bread.jpg" id="img_fade" class="img-fade" >
+  </div>
   </body>
     
   <script>
@@ -217,8 +219,9 @@
   });
 }
 
-function fadeImage(element) {
+function fadeImage(image,text) {
       element.classList.add("fade")
+      text.textcontent = "Pita Bread"
 }
   </script>
 </html>
