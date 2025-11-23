@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <title>Korean Cuisine</title>
+    <title>South Korean Cuisine</title>
     <meta charset="UTF-8">
     <style> 
       .hidden-text {
@@ -49,10 +49,10 @@
   </head>
    <body>
       <div style="text-align: center;">
-     <h1 style="font-size: 30px;">Korean Cuisine</h1>
+     <h1 style="font-size: 30px;">South Korean Cuisine</h1>
     </div>
   <br>
-  <h2>Can You Guess Some Commonly Used Korean Ingredients?!?!?!?</h2>
+  <h2>Can You Guess Some Commonly Used South Korean Ingredients?!?!?!?</h2>
   <img src="https://uber721.github.io/gochujang.jpg" width="100" height="100"><input type="text" class="answer" data-correct="gochujang" data-differentcorrect="highschrroms"placeholder="Ingredient 1"> <br>
   <img src="https://uber721.github.io/fish sauce.jpg" width="100" height="100"><input type="text" class="fish sauce" data-correct="fish sauce" data-differentcorrect="highschrroms"placeholder="Ingredient 1"> <br>
    <img src="https://uber721.github.io/spring onions.jpg" width="100" height="100"><input type="text" class="answer" data-correct="spring onion" data-differentcorrect="spring onions"placeholder="Ingredient 1"> <br>
@@ -62,4 +62,207 @@
      <img src="https://uber721.github.io/seaweed.jpg" width="100" height="100"><input type="text" class="answer" data-correct="seaweed" data-differentcorrect="highschrroms"placeholder="Ingredient 1"> <br>
      <img src="https://uber721.github.io/sesame seeds.jpg" width="100" height="100"><input type="text" class="answer" data-correct="sesame seeds" data-differentcorrect="highschrroms"placeholder="Ingredient 1"> <br>
       <button onclick="checkAllAnswers()">Check Answers</button>
+     <br>
+     <h2>Commonly Used Equipment</h2>
+     <div class="overlay-box">
+  <img src="https://uber721.github.io/grill plate.jpg" 
+       id="img_fade" 
+       class="img-fade" 
+       onclick="fadeImage(this,'info5')">
+  <p id="info5" class="hidden-text">A grill plate. It is an essential part of a typical Korean barbaque.</p>
+</div>
+     <div class="overlay-box">
+  <img src="https://uber721.github.io/ongii.jpg" 
+       id="img_fade" 
+       class="img-fade" 
+       onclick="fadeImage(this,'info1')">
+  <p id="info1" class="hidden-text">An Onggi. It is a pot used for fermenting kimchi, another Korean Staple.</p>
+</div>
+     <div class="overlay-box">
+  <img src="https://uber721.github.io/banchan plates.jpg" 
+       id="img_fade" 
+       class="img-fade" 
+       onclick="fadeImage(this,'info2')">
+  <p id="info2" class="hidden-text">Banchan Plates. Used to house side dishes. </p>
+</div>
+          <div class="overlay-box">
+  <img src="https://uber721.github.io/rice cooker.jpg" 
+       id="img_fade" 
+       class="img-fade" 
+       onclick="fadeImage(this,'info3')">
+  <p id="info3" class="hidden-text">A rice cooker. Unsuprisingly, it cooks rice. Wowzers!</p>
+</div>
+     <div class="overlay-box">
+  <img src="https://uber721.github.io/Mortar and Pestle.jpg" 
+       id="img_fade" 
+       class="img-fade" 
+       onclick="fadeImage(this,'info6')">
+  <p id="info6" class="hidden-text">A mortar and pestle. It is used to mash stuff like spices into itty bitty pieces. </p>
+</div>
+     <div class="overlay-box">
+  <img src="https://uber721.github.io/Mandoline Slicer.jpg" 
+       id="img_fade" 
+       class="img-fade" 
+       onclick="fadeImage(this,'info67')">
+  <p id="info67" class="hidden-text">A mandoline slicer. It is used to slice things into very thin slices. </p>
+</div>
+     <br>
+     <h2>Food Preperation Techniques</h2>
+     <div class="question">
+    <p>The process of converting carbohydrates into alcohol or organic acids by microorganisms like yeast or bacteria in an anaerobic environment.</p>
+    <select data-answer="Fermentation">
+      <option value="">--Choose--</option>
+      <option>Boiling</option>
+      <option>Fermentation</option>
+      <option>Grilling</option>
+      <option>Marination</option>
+      <option>Pickling</option>
+      <option>Steaming</option>
+      <option>Stir Frying</option>
+    </select>
+  </div>
+         <div class="question">
+    <p>Meat or Seafood is cooked over charcoal or tabletop grills</p>
+    <select data-answer="Grilling">
+      <option value="">--Choose--</option>
+      <option>Boiling</option>
+      <option>Fermentation</option>
+      <option>Grilling</option>
+      <option>Marination</option>
+      <option>Pickling</option>
+      <option>Steaming</option>
+      <option>Stir Frying</option>
+    </select>
+  </div>
+           <div class="question">
+    <p>Ingredients are cooked in boiling water</p>
+    <select data-answer="Boiling">
+      <option value="">--Choose--</option>
+      <option>Boiling</option>
+      <option>Fermentation</option>
+      <option>Grilling</option>
+      <option>Marination</option>
+      <option>Pickling</option>
+      <option>Steaming</option>
+      <option>Stir Frying</option>
+    </select>
+  </div>
+           <div class="question">
+    <p>Food is cooked in steam</p>
+    <select data-answer="Steaming">
+      <option value="">--Choose--</option>
+      <option>Boiling</option>
+      <option>Fermentation</option>
+      <option>Grilling</option>
+      <option>Marination</option>
+      <option>Pickling</option>
+      <option>Steaming</option>
+      <option>Stir Frying</option>
+    </select>
+  </div>
+             <div class="question">
+    <p>Meat or vegetables are soaked in sauces or juices</p>
+    <select data-answer="Marination">
+      <option value="">--Choose--</option>
+      <option>Boiling</option>
+      <option>Fermentation</option>
+      <option>Grilling</option>
+      <option>Marination</option>
+      <option>Pickling</option>
+      <option>Steaming</option>
+      <option>Stir Frying</option>
+    </select>
+  </div>  
+               <div class="question">
+    <p>Quick cooking over high heat with minimal oil.</p>
+    <select data-answer="Stir Frying">
+      <option value="">--Choose--</option>
+      <option>Boiling</option>
+      <option>Fermentation</option>
+      <option>Grilling</option>
+      <option>Marination</option>
+      <option>Pickling</option>
+      <option>Steaming</option>
+      <option>Stir Frying</option>
+    </select>
+  </div> 
+                 <div class="question">
+    <p>Vegetables are salted and seasoned, sometimes fermented.</p>
+    <select data-answer="Pickling">
+      <option value="">--Choose--</option>
+      <option>Boiling</option>
+      <option>Fermentation</option>
+      <option>Grilling</option>
+      <option>Marination</option>
+      <option>Pickling</option>
+      <option>Steaming</option>
+      <option>Stir Frying</option>
+    </select>
+  </div>
+     <br>
+     <h2>Food Customs and Beliefs</h2>
+     <p>
+     <ul>
+       <li><b>Communal Dining</b> - Meals are shared, with multiple side dishes laid in the middle for everyone to share.</li>
+       <li><b>Hierachy at the Table</b> - Food is served to the eldest first, and younger people haev to wait until they start eating.</li>
+       <li><b>Fermentation as Preservation</b> - Fermented foods are believed to embody patience, transformationa and longevity</li>
+       <li><b>Seasonal Eating</b> - Koreans believe in eating foods that balance the body with the seasons.</li>
+     </ul>
+     </p>
+     <br>
+     <h2>Traditional Foods</h2>
+     <img src="https://uber721.github.io/bibimbap.jpg" width="100" height="100"><p>Bibimbap is a food created by cooking rice with various meats and vegetables mixed throughout.</p>
+     <img src="https://uber721.github.io/kimbap.jpg" width="100" height="100"><p>Kimbap is basically Korean sushi. However, there are a few major differences. Kimbap uses rice with sesame oil and salt, while sushi rice uses Rice vinegar, sugar, and salt. Another major difference is the ingredients used. Kimbap uses cooked ingredients like egg, ham, bulgogi, and pickled radish, while Sushi uses raw fish, though cooked ingredients and vegetables are also used. </p>
+     <img src="https://uber721.github.io/tteokboki.jpg" width="100" height="100"><p>Tteokboki, (which is a nightmare to spell), is comprised of small, bite sized rice cakes. This is mixed in with fish cakes, and gochujang.  </p>
+     <img src="https://uber721.github.io/bulgogi.jpg" width="100" height="100"><p>Bulgogi is a dish made of thin, marinated strips of meat, usually beef.It can be served with rice and vegetables.</p>
+     <img src="https://uber721.github.io/hotteok.jpg" width="100" height="100"><p>Hotteok is a Korean snack, which comprises of a pstry filled with different fillings, These can include, red bean paste, cinammon, brown sugar and nuts</p>
+<br>
+     <h2>Chuseok and Songpyeong</h2>
+     <p>Chuseok is a 3 day holiday celebrated on the 15th day of the 8th month of the lunisolar calendar. This is usually during mid autumn. During the holiday, families honour theur ancestors, share a large feast with traditional foods like songpyeon and newly harvested vegetables, and participate in cultural activities. </p>
+     <img src="https://uber721.gituhb.io" width="100" height="100"> <p>Songpyeong is a traditional Korean snack which is made of sticky rice cake around a filling thats typically made of sweet foods, like sesame seeds, chestnuts, or red beans. They are also steamed on a bed of pine needles, giving them a unique flavour.</p>
+     <br>
+     <br>
+     <a href="https://uber721.github.io"> To Home!</a>
+     
+
+     
+     <script>
+               document.getElementById('mark-btn').addEventListener('click', () => {
+      document.querySelectorAll('select').forEach(select => {
+        const correct = select.dataset.answer.toLowerCase();
+        const user = (select.value || '').toLowerCase();
+
+        select.classList.remove('correct', 'incorrect');
+        if (user === correct) {
+          select.classList.add('correct');
+        } else {
+          select.classList.add('incorrect');
+        }
+      });
+    });
+        function checkAllAnswers() {
+  document.querySelectorAll('.answer').forEach(input => {
+    const correctAnswer = input.dataset.correct.toLowerCase();
+    const differentcorrectAnswer = input.dataset.differentcorrect.toLowerCase();
+    const userAnswer = input.value.trim().toLowerCase();
+
+    if (userAnswer === correctAnswer) {
+      input.classList.remove("incorrect");
+      input.classList.add("correct");
+    } else  if (userAnswer === differentcorrectAnswer) {
+      input.classList.remove("incorrect");
+      input.classList.add("correct");
+    } else {
+      input.classList.remove("correct");
+      input.classList.add("incorrect");
+    }
+  });
+}
+
+function fadeImage(image, infoId) {
+  image.classList.add("fade"); // fade the image
+  const text = document.getElementById(infoId); // use the id string
+  text.classList.add("show");  // reveal the text
+}
+     </script>
       
