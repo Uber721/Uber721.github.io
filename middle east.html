@@ -24,16 +24,17 @@
       padding: 10px 20px;
       font-size: 16px;
     }
-          img-fader{
-      width: 150px;
-      height: 150px;
-      border: 2px solid black;
-      cursor: pointer;
-      transition: opacity 2s ease; /* Smooth fade over 2 seconds */
-    }
+ .img-fade {
+  width: 150px;
+  height: 150px;
+  border: 2px solid black;
+  cursor: pointer;
+  transition: opacity 2s ease; /* Smooth fade */
+}
 
-    .fade {
-      opacity: 0; /* Target state after fade */
+.img-fade.fade {
+  opacity: 0; /* Faded state */
+}
 
       </style> 
   </head>
@@ -180,7 +181,7 @@
     <br>
 <h2> Equipment Used in Middle East </h2>
     <p>Click on the images to reveal the answers.</p>
-    <img src="https://uber721.github.io/pita bread.jpg" style="top:1000px;" onclick="fadeimage(this)">
+    <img src="https://uber721.github.io/pita bread.jpg" style="top:1000px;" class="img-fade"onclick="fadeImage(this)">
   </body>
     
   <script>
